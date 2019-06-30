@@ -1,0 +1,10 @@
+.postAutor{
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: column;
+    font-size: 12px;
+  }
+
+.postAutor span{
+    font-weight: bold;
+}
