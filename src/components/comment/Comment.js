@@ -5,7 +5,7 @@ const Comment = ({comment}) => {
     return (
         <li className={styleComment.commentBox}>
             <div className={styleComment.commentBody}>{comment.body}</div>
-            <div className={styleComment.commentAutor}><span>Autor </span>{comment.email}</div>
+            <div className={styleComment.commentAutor}><span>Autor email </span>{comment.email}</div>
         </li>
     )
 }
