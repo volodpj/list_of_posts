@@ -11,9 +11,9 @@ class Post extends React.Component {
         }
 
         this.checkComments = () => {
-            this.setState({
-                shouComments: !this.state.shouComments,
-            })
+            this.setState((prevState) => ({
+                shouComments: !prevState.shouComments,
+            }))
         }
     }
 
@@ -27,7 +27,7 @@ class Post extends React.Component {
                         <div>{this.props.post.body}</div>
                     </div>
                     <User className={stylePost.autorBox} user={this.props.post.user}/>
-                    <button onClick={() => {this.checkComments()}} className={stylePost.btn}>Comments</button>
+                    <button onClick={this.checkComments} className={stylePost.btn}>Comments</button>
                 </div>
                 {this.state.shouComments ? (
                     <CommentList className={stylePost.CommentListBox} comments={this.props.post.comments} />
